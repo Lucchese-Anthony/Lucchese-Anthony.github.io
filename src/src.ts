@@ -1,4 +1,4 @@
-// src/src.ts
+// ./src/src.ts
 
 const allProjects = [
     "https://github.com/Lucchese-Anthony/Tic-Tac-Toe",
