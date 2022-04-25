@@ -1,4 +1,5 @@
 // ./src/src.ts
+export{};
 
 const allProjects = [
     "https://github.com/Lucchese-Anthony/Tic-Tac-Toe",
