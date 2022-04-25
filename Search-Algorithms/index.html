@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="src/layout.css">
+    <script src="src/index.js" type="text/JavaScript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet"> 
+    <header>
+        <title>Search Algorithms</title>
+    </header>
+    <p class="background" id="background">
+        <script>
+            background();
+        </script>
+    </p>
+    <body class="onlycomputers">
+        <!--
+        <div class="head-div">
+            <h1>Algorithm Visualization created by Me.</h1>
+        </div>
+        -->
+        <div class="left-div">
+            <form class="form">
+            <label for="algorithm">Choose an Algorithm</label>
+            <select name="algorithm" id="search-algo" onchange="chooseAlgorithm()">
+                <option value="BFS">Breadth First Search</option>
+                <option value="DFS">WIP: Depth First Search</option>
+            </select>
+            </form>
+            <form class="form">
+                <label for="grid-size">Choose a Graph Size</label>
+                <select name="grid-size" id="grid-form" onchange="changeCellNumber()">
+                    <option value="2">2x2</option>
+                    <option value="3">3x3</option>
+                    <option value="4">4x4</option>
+                    <option value="5">5x5</option>
+                    <option value="6">6x6</option>
+                    <option value="7">7x7</option>
+                    <option value="8">8x8</option>
+                    <option value="9">9x9</option>
+                    <option value="10">10x10</option>
+                    <option value="11">11x11</option>
+                    <option value="12">12x12</option>
+                </select>
+            </form>
+            <form class="form">
+                <label for="height">Change Grid Size</label>
+                <input id="height" type="number">
+                <input id="width" type="number">
+            </form>
+            <button id="sizeButton" class="button-3" role="button" onclick="changeSizeOfCells();">Change Size</button>
+            <button id="stepAlgo" class="button-1" role="button" onclick="stepThroughAlgorithm();">Step Through Algorithm</button>
+            <button id="finishAlgo" class="button-1" role="button" onclick="finishAlgorithm();">Complete Algorithm</button>
+            <button id="resetBoard" class="button-2" role="button" onclick="clearBoard();">Reset Board</button>
+            <button id="endFlag" class="button-3" role="button" onclick="setEnd();">Set End Flag</button>
+            <button id="startFlag" class="button-3" role="button" onclick="setStart();">Set Start Flag</button>
+            <button id="setWalls" class="button-3" role="button" onclick="setWalls();">Set Walls</button>
+        </div>
+        <div class="right-div">
+            <h2 id="Search-Algo-Title">
+                <script>chooseAlgorithm();</script>
+            </h2>
+            <div class="grid" id="grid">
+                <script>changeCellNumber()</script>
+            </div>
+        </div>
+    </body>
+</html>
