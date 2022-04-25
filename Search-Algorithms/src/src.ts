@@ -1,4 +1,4 @@
-var hi = 0;
+// ./Search-Algorithms/src/src.ts
 var endCoords = [0, 0];
 var startCoords = [0, 0];
 var wallCount = 0;
