@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="src/layout.css">
-    <script src="src/index.js" type="text/JavaScript"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet"> 
+    <script src="./src/build/sigma.min.js"></script>
+    <!-- <script src="./src/build/graphology.min.js"></script> -->
+    <script src="src/helper.js" type="text/JavaScript"></script>
+    <script src="src/algorithm.js" type="text/JavaScript"></script>
+    <script src="src/layouts.js" type="text/JavaScript"></script>
+    <script src="src/buttons.js" type="text/JavaScript"></script>
     <header>
         <title>Search Algorithms</title>
     </header>
-    <p class="background" id="background">
-        <script>
-            background();
-        </script>
-    </p>
     <body class="onlycomputers">
         <!--
         <div class="head-div">
@@ -20,49 +20,95 @@
         </div>
         -->
         <div class="left-div">
-            <form class="form">
-            <label for="algorithm">Choose an Algorithm</label>
-            <select name="algorithm" id="search-algo" onchange="chooseAlgorithm()">
-                <option value="BFS">Breadth First Search</option>
-                <option value="DFS">WIP: Depth First Search</option>
-            </select>
-            </form>
-            <form class="form">
-                <label for="grid-size">Choose a Graph Size</label>
-                <select name="grid-size" id="grid-form" onchange="changeCellNumber()">
-                    <option value="2">2x2</option>
-                    <option value="3">3x3</option>
-                    <option value="4">4x4</option>
-                    <option value="5">5x5</option>
-                    <option value="6">6x6</option>
-                    <option value="7">7x7</option>
-                    <option value="8">8x8</option>
-                    <option value="9">9x9</option>
-                    <option value="10">10x10</option>
-                    <option value="11">11x11</option>
-                    <option value="12">12x12</option>
-                </select>
-            </form>
-            <form class="form">
-                <label for="height">Change Grid Size</label>
-                <input id="height" type="number">
-                <input id="width" type="number">
-            </form>
-            <button id="sizeButton" class="button-3" role="button" onclick="changeSizeOfCells();">Change Size</button>
-            <button id="stepAlgo" class="button-1" role="button" onclick="stepThroughAlgorithm();">Step Through Algorithm</button>
-            <button id="finishAlgo" class="button-1" role="button" onclick="finishAlgorithm();">Complete Algorithm</button>
-            <button id="resetBoard" class="button-2" role="button" onclick="clearBoard();">Reset Board</button>
-            <button id="endFlag" class="button-3" role="button" onclick="setEnd();">Set End Flag</button>
-            <button id="startFlag" class="button-3" role="button" onclick="setStart();">Set Start Flag</button>
-            <button id="setWalls" class="button-3" role="button" onclick="setWalls();">Set Walls</button>
-        </div>
-        <div class="right-div">
-            <h2 id="Search-Algo-Title">
-                <script>chooseAlgorithm();</script>
-            </h2>
-            <div class="grid" id="grid">
-                <script>changeCellNumber()</script>
+            <div class="left-div-1">
+                <form class="form">
+                    <label for="algorithm">Choose an Algorithm</label>
+                    <select name="algorithm" id="algorithm">
+                        <option value="BFS">Breadth First Search</option>
+                        <option value="DFS">Depth First Search</option>
+                        <option value="Custom">Custom Algorithm</option> 
+                    </select>
+                </form>
+                <form class="form">
+                    <label for="grid-size">Choose a Graph Size</label>
+                    <select name="grid-size" id="graph" onchange="changeGraph()">
+                        <option value="tree">(Binary) Tree</option>
+                        <option value="grid">6x6 Grid</option>
+                        <option value="custom">Custom Graph</option>
+                    </select>
+                </form>
+                <form class="form">
+                    <label for="height">Path ID start and finish</label>
+                    <input id="start" type="number">
+                    <input id="end" type="number">
+                </form>
+                <button id="stepAlgo" class="button-1" role="button" onclick="stepThroughAlgorithm();">Step Through Algorithm</button>
+                <button id="finishAlgo" class="button-1" role="button" onclick="completeAlgorithm();">Complete Algorithm</button>
+
+                <button id="sizeButton" class="button-3" role="button" onclick="onPathButtonPress();">Change Size</button>
+                <button id="resetBoard" class="button-2" role="button" onclick="clearBoard();">Reset Board</button>
+                <!-- button to submit text-->            
+            </div>
+            <!-- put another div below left div -->
+            <div class="left-div-2">
+                <div class="container">
+                    <div class="stack">
+                      <h2>Stack</h2>
+                      <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                        <li>Item 4</li>
+                        <li>Item 5</li>
+                      </ul>
+                    </div>
+                    <div class="queue">
+                      <h2>Queue</h2>
+                      <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                        <li>Item 4</li>
+                        <li>Item 5</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
             </div>
         </div>
+        
+        <div class="right-div">
+            <div class="right-div-1">
+            <div id='sigma-container'></div>
+                <script src="./src/src.js"></script>
+            
+            </div>
+            <div class="right-div-divider"></div>
+            <div class="right-div-2">
+                    <textarea id="algo" class="fancy-textarea" placeholder="Output will be displayed here"></textarea>
+
+            </div>
+        </div>       
+
+        
+        
+            
+        
+        <!-- Context Menu -->
+        <!-- <div class="menu">
+            <ul class="menu-options">
+              <li class="menu-option">Add new node</li>
+            </ul>
+        </div>
+
+        <div class="node">
+            <ul class="menu-options">
+              <li class="menu-option">Delete Node</li>
+              <li class="menu-option">Add Edge</li>
+              <li class="menu-option">Set as Start</li>
+              <li class="menu-option">Set as End</li>
+            </ul>
+        </div>
+        <script src="./src/context-menu.js"></script> -->
     </body>
 </html>

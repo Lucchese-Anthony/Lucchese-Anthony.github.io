@@ -9,7 +9,11 @@ and (max-device-width : 700px) {
         display:none;
     }
 }
-
+#sigma-container { 
+    width:1050px; 
+    height:500px; 
+    background-color:whitesmoke;
+}
 html {
     color:slategray;
     font-family: 'Fira Sans', serif;
@@ -27,24 +31,11 @@ html {
     height:100%
 }
 
-div {
+/* div {
     background-color: whitesmoke;
     border-radius: 10px;
     position: relative;
-}
-.cells {
-    background-color: gray;
-    color: black;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:0px;
-    border: #121212;
-    border-width: 2px;
-    border-style: solid;
-}
+} */
 
 .algo-title {
     margin:.5rem;
@@ -52,6 +43,8 @@ div {
 
 .form {
     margin: 1rem;
+    /* center  */
+    margin-left: auto;
 }
 
 /* CSS */
@@ -128,39 +121,25 @@ div {
     vertical-align: middle;
     white-space: nowrap;
   }
-
-.row {
+.left-div { 
+    /* make this element a wrapper for left-div-1 and left-div-2 vertically, and takes up the left 20% of the screen */
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.grid {
-    display: flex;
-    flex-flow: column wrap;
-    text-align: center;
-    justify-content: center;
-    margin: auto;
-}
-
-.head-div {
-    position:fixed;
-
-}
-.left-div {
-    width:20%; 
-    float:left;
-    position:fixed;
-    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
     position: fixed;
-    border-width: 3px;
-    border-style: solid;
-    clear:both;
-}
-
-.right-div {
-    width:75%;
-    float:right;
+    overflow: hidden;
+    background-color: whitesmoke;
+  }
+.left-div-1 {
+    /* make this the first element in the wrapper for left-div, that is the top div */
+    flex: 1;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    position: relative;
+    width:80%;
+    float:left;
     overflow-x: hidden;
     overflow-y: auto;
     clear:both;
@@ -170,3 +149,373 @@ div {
     border-style: solid;
 }
 
+.left-div-2 {
+    /* make this the second element in the wrapper for left-div, that is the bottom div */
+    flex: 1;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    position: relative;
+    width:80%;
+    float:left;
+    overflow-x: hidden;
+    overflow-y: auto;
+    clear:both;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-width: 3px;
+    border-style: solid;
+}
+/* .left-div-1 {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    position: relative;
+    width:20%; 
+    float:left;
+    flex:1;
+    position:fixed;
+    text-align: center;
+    position: fixed;
+    border-width: 3px;
+    border-style: solid;
+    clear:both;
+}
+.left-div-2 {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    position: relative;
+    width:20%; 
+
+    float:left;
+    position:fixed;
+    text-align: center;
+    position: fixed;
+    border-width: 3px;
+    border-style: solid;
+    clear:both;
+} */
+
+/* .right-div-1 {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    position: relative;
+    width:72%;
+    float:right;
+    overflow-x: hidden;
+    overflow-y: auto;
+    clear:both;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-width: 3px;
+    border-style: solid;
+} */
+/* the right-div-1 should have a greater height than right-div-2 */
+.right-div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    position: fixed;
+    overflow: hidden;
+    background-color: whitesmoke;
+    right: 0;
+}
+  
+.right-div-1 {
+    flex: 4;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    position: relative;
+    width: 99%;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-width: 3px;
+    border-style: solid;
+    border-right: none;
+}
+  
+.right-div-2 {
+    flex: 1;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    position: relative;
+    width: 99%;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-width: 3px;
+    border-style: solid;
+    border-left: none;
+}
+  
+.divider {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    cursor: ns-resize;
+}
+
+.input-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+  
+  .input-div input[type="text"] {
+    width: 45%;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    margin: 5px;
+  }
+  
+  .input-div input[type="text"]:focus {
+    outline: none;
+    background-color: white;
+  }
+
+body {
+    font-family: "Roboto", san-serif;
+  }
+.center {
+    text-align: center;
+}
+.menu {
+    width: 120px;
+    z-index: 1;
+    box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    display: none;
+    transition: 0.2s display ease-in;
+}
+
+.menu .menu-options {
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1;
+}
+.menu .menu-options .menu-option {
+    font-weight: 500;
+    z-index: 1;
+    font-size: 14px;
+    padding: 10px 40px 10px 20px;
+    cursor: pointer;
+}
+.menu .menu-options .menu-option:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+button {
+    background: grey;
+    border: none;
+}
+button .next {
+    color: green;
+}
+button[disabled="false"]:hover .next {
+    color: red;
+    animation: move 0.5s;
+    animation-iteration-count: 2;
+}
+
+@keyframes move {
+from {
+    transform: translate(0%);
+}
+50% {
+    transform: translate(-40%);
+}
+}
+
+#cy {
+    width: 300px;
+    height: 300px;
+    display: block;
+  }
+
+.container {
+    display: flex;
+  }
+  
+  .stack, .queue {
+    width: 50%;
+    padding: 1rem;
+  }
+  
+  .stack {
+    background-color: #f8f8f8;
+  }
+  
+  .queue {
+    background-color: #e8e8e8;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+  
+  
+
+
+/* Main styles for the textarea box */
+.fancy-textarea {
+font-family: Consolas, 'Courier New', monospace;
+font-size: 16px;
+line-height: 1.5;
+padding: 1rem;
+border-radius: 10px;
+box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+color: #333;
+background-color: #f8f8f8;
+border: none;
+width: 100%;
+height: 150px;
+resize: none;
+overflow-y: scroll;
+box-sizing: border-box;
+}
+/* Styles for the code highlighting */
+.fancy-textarea .token.comment,
+.fancy-textarea .token.prolog,
+.fancy-textarea .token.doctype,
+.fancy-textarea .token.cdata {
+color: slategray;
+}
+.fancy-textarea .token.punctuation {
+color: #999;
+}
+.fancy-textarea .token.namespace {
+opacity: .7;
+}
+.fancy-textarea .token.property,
+.fancy-textarea .token.tag,
+.fancy-textarea .token.constant,
+.fancy-textarea .token.symbol,
+.fancy-textarea .token.deleted {
+color: #905;
+}
+.fancy-textarea .token.boolean,
+.fancy-textarea .token.number {
+color: #690;
+}
+.fancy-textarea .token.selector,
+.fancy-textarea .token.attr-name,
+.fancy-textarea .token.string,
+.fancy-textarea .token.char,
+.fancy-textarea .token.builtin,
+.fancy-textarea .token.inserted {
+color: #690;
+}
+.fancy-textarea .token.operator,
+.fancy-textarea .token.entity,
+.fancy-textarea .token.url,
+.fancy-textarea .language-css .token.string,
+.fancy-textarea .style .token.string {
+color: #9a6e3a;
+background-color: #f8f8f8;
+}
+.fancy-textarea .token.atrule,
+.fancy-textarea .token.attr-value,
+.fancy-textarea .token.keyword {
+color: #07a;
+}
+.fancy-textarea .token.function,
+.fancy-textarea .token.class-name {
+color: #DD4A68;
+}
+.fancy-textarea .token.regex,
+.fancy-textarea .token.important {
+color: #e90;
+}
+.fancy-textarea .token.important,
+.fancy-textarea .token.bold {
+font-weight: bold;
+}
+.fancy-textarea .token.italic {
+font-style: italic;
+}
+.fancy-textarea .token.entity {
+cursor: help;
+}
+/* Styles for the toolbar */
+.toolbar {
+display: flex;
+justify-content: flex-end;
+margin-top: 1rem;
+}
+.toolbar button {
+background-color: #07a;
+color: #fff;
+font-size: 1rem;
+padding: .5rem 1rem;
+}
+textarea.fancy {
+    /* Set the font size and style */
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    
+    /* Set the background color, border, and border radius */
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 10px;
+    
+    /* Set the box shadow for the textarea */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    
+    /* Set the padding and margin */
+    padding: .5rem 1rem;
+    margin: 1rem 0;
+    
+    /* Set the text color and alignment */
+    color: #333333;
+    text-align: left;
+    
+    /* Set the scrollbar styles */
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #F5F5F5;
+  }
+  
+  /* Style the scrollbar */
+  textarea.fancy::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  textarea.fancy::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+  }
+  
+  textarea.fancy::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 10px;
+  }
+  
+  /* Style the placeholder text */
+  textarea.fancy::placeholder {
+    font-style: italic;
+    color: #BBBBBB;
+  }

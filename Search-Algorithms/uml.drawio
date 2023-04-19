@@ -1,0 +1,228 @@
+<mxfile host="65bd71144e">
+    <diagram id="JWZ9JyGtqiC2KYP99TfJ" name="Buttons">
+        <mxGraphModel dx="1169" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-3" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="Htt4oTHqnvHCUud1VKo4-1" target="Htt4oTHqnvHCUud1VKo4-2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-1" value="Reset Graph Button" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-5" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="Htt4oTHqnvHCUud1VKo4-2" target="Htt4oTHqnvHCUud1VKo4-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-2" value="Clear SigmaJS graph, and Node array" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="260" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-4" value="Prompt Graph Stating No Nodes" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="400" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-16" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="Htt4oTHqnvHCUud1VKo4-6" target="Htt4oTHqnvHCUud1VKo4-7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-6" value="Use Built-In Graph (dropdown)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-9" style="edgeStyle=none;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="Htt4oTHqnvHCUud1VKo4-7" target="Htt4oTHqnvHCUud1VKo4-8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-13" style="edgeStyle=none;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="Htt4oTHqnvHCUud1VKo4-7" target="Htt4oTHqnvHCUud1VKo4-12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-15" style="edgeStyle=none;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="Htt4oTHqnvHCUud1VKo4-7" target="Htt4oTHqnvHCUud1VKo4-14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-18" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="Htt4oTHqnvHCUud1VKo4-7" target="Htt4oTHqnvHCUud1VKo4-17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-7" value="Promp drop-down menu with various built-in graphs premade" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="260" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-8" value="NxM grid" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="260" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-12" value="Binary tree" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="300" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-14" value="Possibly Randomized Graph" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="485" y="340" width="80" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-17" value="Replace Current Graph with Pre-made Graph&amp;nbsp;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="400" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-23" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="Htt4oTHqnvHCUud1VKo4-19" target="Htt4oTHqnvHCUud1VKo4-22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-19" value="Iterate Algorithm Button" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-5" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="Htt4oTHqnvHCUud1VKo4-22" target="5HHXUQHRkXh9iRdhPWle-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-9" value="Custom" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="5HHXUQHRkXh9iRdhPWle-5" vertex="1" connectable="0">
+                    <mxGeometry x="-0.133" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-7" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="Htt4oTHqnvHCUud1VKo4-22" target="5HHXUQHRkXh9iRdhPWle-3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="660" y="320"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-8" value="Pre-defined" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="5HHXUQHRkXh9iRdhPWle-7" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2925" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-2" y="5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Htt4oTHqnvHCUud1VKo4-22" value="Check Which Algorithm to use" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="220" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-11" value="Yes" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="5HHXUQHRkXh9iRdhPWle-3" target="5HHXUQHRkXh9iRdhPWle-10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-13" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="5HHXUQHRkXh9iRdhPWle-3" target="5HHXUQHRkXh9iRdhPWle-12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-3" value="Check if Start and End Nodes are Set" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="390" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-6" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="5HHXUQHRkXh9iRdhPWle-4" target="5HHXUQHRkXh9iRdhPWle-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-4" value="Import User Defined Algorithm" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="310" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-10" value="Step Through Algorithm slowly" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="460" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-14" style="edgeStyle=none;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="5HHXUQHRkXh9iRdhPWle-12" target="5HHXUQHRkXh9iRdhPWle-3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="608" y="405"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-12" value="Send Alert saying which state is not set" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="460" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-15" value="On Button Press" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="Htt4oTHqnvHCUud1VKo4-1" edge="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="210" y="50" as="sourcePoint"/>
+                        <mxPoint x="240" y="60" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-16" value="On Button Press" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="399.55" y="50" as="sourcePoint"/>
+                        <mxPoint x="399.55" y="120" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5HHXUQHRkXh9iRdhPWle-17" value="On Button Press" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="719.55" y="50" as="sourcePoint"/>
+                        <mxPoint x="719.55" y="120" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="wXYOS-3VkkoFeutzMVs3" name="IndividualNode">
+        <mxGraphModel dx="935" dy="511" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" value="Left Click and Hold" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Right Click" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Individual Node" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Drag around Node" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="90" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=none;html=1;startArrow=diamond;startFill=0;" parent="1" source="4" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="4" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="4" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="4" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Custom Context / Right Click Menu&amp;nbsp;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="9" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="edgeStyle=none;html=1;startArrow=diamond;startFill=0;" parent="1" source="9" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="9" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="9" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Add Node" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="200" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="13" target="36" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Delete Node" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="195" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="15" target="27" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" parent="1" source="15" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Set/Remove as Special Node" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="280" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Create Arrow to New Node" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="210" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Add New Node to Array" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="280" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Change Focus to new Node" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="290" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=none;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="27" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Set Node as Start" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="345" width="75" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="29" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Set Node as End" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="345" width="75" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Set / remove flag" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="400" width="70" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="Remove Node from Graph" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="191" width="85" height="38" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
