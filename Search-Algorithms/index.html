@@ -42,35 +42,24 @@
                     <input id="start" type="number">
                     <input id="end" type="number">
                 </form>
-                <button id="stepAlgo" class="button-1" role="button" onclick="stepThroughAlgorithm();">Step Through Algorithm</button>
-                <button id="finishAlgo" class="button-1" role="button" onclick="completeAlgorithm();">Complete Algorithm</button>
-
-                <button id="sizeButton" class="button-3" role="button" onclick="onPathButtonPress();">Change Size</button>
+                <button id="sizeButton" class="button-3" role="button" onclick="onPathButtonPressed();">Set Path</button>
                 <button id="resetBoard" class="button-2" role="button" onclick="clearBoard();">Reset Board</button>
-                <!-- button to submit text-->            
+
+
+                <button id="stepAlgo" class="button-1" role="button" onclick="stepThroughAlgorithm(); stepThroughAlgorithmButton++;">Step Through Algorithm</button>
+                <button id="finishAlgo" class="button-1" role="button" onclick="completeAlgorithm(); ">Complete Algorithm</button>
+                <!-- create button with class button-1 that accepts a file with .json -->
+                <button id="import" class="button-1" role="button" onclick="importStateOfWebsite();">Import</button>
+                <button id="export" class="button-1" role="button" onclick="exportStateOfWebsite();">Export</button>
             </div>
             <!-- put another div below left div -->
             <div class="left-div-2">
                 <div class="container">
-                    <div class="stack">
+                    <div class="stack" id="stack">
                       <h2>Stack</h2>
-                      <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                        <li>Item 5</li>
-                      </ul>
                     </div>
-                    <div class="queue">
+                    <div class="queue" id="queue">
                       <h2>Queue</h2>
-                      <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                        <li>Item 5</li>
-                      </ul>
                     </div>
                   </div>
                   

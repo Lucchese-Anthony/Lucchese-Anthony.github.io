@@ -3,9 +3,18 @@ var Queue = /** @class */ (function () {
         this.queue = [];
     }
     Queue.prototype.enqueue = function (item) {
+        // update queue class
+        var q = document.getElementById("queue");
+        q.innerHTML += "<li>" + item.node.id + "</li>";
         this.queue.push(item);
     };
     Queue.prototype.dequeue = function () {
+        var q = document.getElementById("queue");
+        q.innerHTML = "";
+        q.innerHTML += "<h2>Queue</h2><ul>";
+        for (var i = 1; i < this.queue.length; i++) {
+            q.innerHTML += "<li>" + (parseInt(this.queue[i].node.id) + 1) + "</li>";
+        }
         return this.queue.shift();
     };
     Queue.prototype.isEmpty = function () {
@@ -17,16 +26,19 @@ var Queue = /** @class */ (function () {
     Queue.prototype.size = function () {
         return this.queue.length;
     };
-    // update html element every time queue is updated
-    Queue.prototype.update = function () {
-        var queue = document.getElementById("queue");
-        queue.innerHTML = "";
-        queue.innerHTML += "<h2>Queue</h2><ul>";
-        for (var i = 0; i < this.queue.length; i++) {
-            queue.innerHTML += "<li>" + this.queue[i].node.id + "</li>";
-        }
-        queue.innerHTML += "</ul>";
+    Queue.prototype.print = function () {
+        console.log(this.queue);
     };
+    Queue.prototype.in = function (node) {
+        for (var i = 0; i < this.queue.length; i++) {
+            if (this.queue[i].node.id == node.id) {
+                return true;
+            }
+        }
+        return false;
+    };
+    // update html element every time queue is updated
+    // update queue on change
 
     return Queue;
 }());
@@ -36,9 +48,18 @@ var Stack = /** @class */ (function () {
         this.stack = [];
     }
     Stack.prototype.push = function (item) {
+        // update stack class
+        var s = document.getElementById("stack");
+        s.innerHTML += "<li>" + item.node.id + "</li>";
         this.stack.push(item);
     };  
     Stack.prototype.pop = function () {
+        var s = document.getElementById("stack");
+        s.innerHTML = "";
+        s.innerHTML += "<h2>Stack</h2><ul>";
+        for (var i = 0; i < this.stack.length - 1; i++) {
+            s.innerHTML += "<li>" + this.stack[i].node.id + "</li>";
+        }
         return this.stack.pop();
     };
     Stack.prototype.isEmpty = function () {
@@ -116,4 +137,11 @@ function getNeighborsHidden(node) {
       }
     }
     return neighbors;
+}
+
+function step() {
+    if (stepThroughAlgorithmButton > 0) {
+        console.log("stepThroughAlgorithmButton: " + stepThroughAlgorithmButton)
+        while(stepThroughAlgorithmButton == stepThroughAlgorithmLoop) {}
+    }
 }
