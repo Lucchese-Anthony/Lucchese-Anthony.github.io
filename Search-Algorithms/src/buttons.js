@@ -9,13 +9,11 @@ function completeAlgorithm() {
     }
     runningCompleteAlgorithm = true;
     if (algorithm == "Custom") {
+        let algo = document.getElementById("custom-algorithm-text").value.trim()
+        eval(algo);
         if(confirm("is your algorithm function main()?")) {
-            let algo = document.getElementById("custom-algorithm-text").value.trim()
             eval("main()");
         } else {
-            let algo = document.getElementById("custom-algorithm-text").value.trim()
-            // prompt user to enter function name
-            eval(algo);
             let algoName = prompt("What is the name of your algorithm function?");
             eval(algoName + "()");
         }
