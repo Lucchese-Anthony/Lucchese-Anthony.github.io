@@ -1,0 +1,210 @@
+#sigma-container {
+  width:100%;
+  height:100%;
+  background-color:whitesmoke;
+}
+html {
+  color:slategray;
+  font-family: 'Fira Sans', serif;
+  scroll-behavior: smooth;
+}
+.background {
+  overflow: hidden;
+  width: 100%;
+  margin: -10px;
+  padding: 0;
+  overflow-wrap: break-word;
+  line-height: 14px;
+  letter-spacing: -2px;
+  position: absolute;
+  height:100% 
+}
+.algo-title {
+  margin:.5rem;
+}
+.form {
+  margin: 1rem;
+  margin-left: auto;
+}
+.left-div {
+ /* make this element a wrapper for left-div-1 and left-div-2 vertically, and takes up the left 20% of the screen */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+.left-div-1, .left-div-2 {
+ /* make this the first element in the wrapper for left-div, that is the top div */
+  flex: 1;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  position: relative;
+  width:80%;
+  float:left;
+  overflow-x: hidden;
+  overflow-y: auto;
+  clear:both;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-width: 3px;
+  border-style: solid;
+}
+.right-div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 75%;
+  position: fixed;
+  overflow: hidden;
+  background-color: whitesmoke;
+  right: 0;
+}
+.right-div-1 {
+  flex: 4;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  position: relative;
+  width: 99%;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-width: 3px;
+  border-style: solid;
+}
+.right-div-2 {
+  flex: 2;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  position: relative;
+  width: 99%;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-width: 3px;
+  border-style: solid;
+}
+.right-div-3 {
+ /* horizontal elements */
+  display:inline-block;
+  width: 48%;
+  height: 100%;
+  position: relative;
+}
+.divider {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  cursor: ns-resize;
+}
+.input-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.input-div input[type="text"] {
+  width: 45%;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  margin: 5px;
+}
+.input-div input[type="text"]:focus {
+  outline: none;
+  background-color: white;
+}
+body {
+  font-family: "Roboto", san-serif;
+}
+.center {
+  text-align: center;
+}
+.menu {
+  width: 120px;
+  z-index: 1;
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  display: none;
+  transition: 0.2s display ease-in;
+}
+.menu .menu-options {
+  list-style: none;
+  padding: 10px 0;
+  z-index: 1;
+}
+.menu .menu-options .menu-option {
+  font-weight: 500;
+  z-index: 1;
+  font-size: 14px;
+  padding: 10px 40px 10px 20px;
+  cursor: pointer;
+}
+.menu .menu-options .menu-option:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+button {
+  background: grey;
+  border: none;
+}
+button .next {
+  color: green;
+}
+button[disabled="false"]:hover .next {
+  color: red;
+  animation: move 0.5s;
+  animation-iteration-count: 2;
+}
+@keyframes move {
+  from {
+      transform: translate(0%);
+ }
+  50% {
+      transform: translate(-40%);
+ }
+}
+#cy {
+  width: 300px;
+  height: 300px;
+  display: block;
+}
+.container {
+  display: flex;
+}
+.stack, .queue {
+  width: 50%;
+  padding: 1rem;
+}
+.stack {
+  background-color: #f8f8f8;
+}
+.queue {
+  background-color: #e8e8e8;
+}
+h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+li:last-child {
+  border-bottom: none;
+}
