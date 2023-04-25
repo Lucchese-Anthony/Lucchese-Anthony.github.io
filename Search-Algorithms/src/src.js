@@ -70,6 +70,7 @@ function log(str) {
 	// add new line after str
 	verboseBox.innerHTML += str + "\n"
 }
+
 function step() {
   if (runningCompleteAlgorithm) {
       return
