@@ -1,58 +1,79 @@
 <!DOCTYPE html>
-<html>
-    <link rel="stylesheet" href="src/layout.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/css/layout.css">
+    <link rel="stylesheet" href="src/css/buttons.css">
+    <link rel="stylesheet" href="src/css/textarea.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet"> 
     <script src="./src/build/sigma.min.js"></script>
-    <!-- <script src="./src/build/graphology.min.js"></script> -->
     <script src="src/helper.js" type="text/JavaScript"></script>
-    <script src="src/algorithm.js" type="text/JavaScript"></script>
     <script src="src/layouts.js" type="text/JavaScript"></script>
     <script src="src/buttons.js" type="text/JavaScript"></script>
+    <script src="src/algorithm.js" type="text/JavaScript"></script>
+  </head>
     <header>
         <title>Search Algorithms</title>
     </header>
-    <body class="onlycomputers">
-        <!--
-        <div class="head-div">
-            <h1>Algorithm Visualization created by Me.</h1>
-        </div>
-        -->
+    <body>
         <div class="left-div">
             <div class="left-div-1">
                 <form class="form">
                     <label for="algorithm">Choose an Algorithm</label>
-                    <select name="algorithm" id="algorithm">
-                        <option value="BFS">Breadth First Search</option>
-                        <option value="DFS">Depth First Search</option>
-                        <option value="Custom">Custom Algorithm</option> 
+                    <select name="algorithm" id="algorithm-list">
+                        <script>
+                            listAlgorithmsInHTML();
+                        </script>
                     </select>
                 </form>
                 <form class="form">
-                    <label for="grid-size">Choose a Graph Size</label>
-                    <select name="grid-size" id="graph" onchange="changeGraph()">
-                        <option value="tree">(Binary) Tree</option>
-                        <option value="grid">6x6 Grid</option>
-                        <option value="custom">Custom Graph</option>
+                    <label for="grid-size">Choose a Graph</label>
+                    <select name="grid-size" id="graph-list" onchange="clearCurrentGraph()">
+                        <script>
+                          listPremadeGraphsInHTML();
+                        </script>
                     </select>
                 </form>
                 <form class="form">
                     <label for="height">Path ID start and finish</label>
                     <input id="start" type="number">
-                    <input id="end" type="number">
+                    <input id="finish" type="number">
                 </form>
                 <button id="sizeButton" class="button-3" role="button" onclick="onPathButtonPressed();">Set Path</button>
-                <button id="resetBoard" class="button-2" role="button" onclick="clearBoard();">Reset Board</button>
-
-
-                <button id="stepAlgo" class="button-1" role="button" onclick="stepThroughAlgorithm(); stepThroughAlgorithmButton++;">Step Through Algorithm</button>
+                <button id="resetBoard" class="button-2" role="button" onclick="clearCurrentGraph();">Reset Board</button>
+                <button id="stepThroughAlgorithmButton" class="button-1" role="button">Step Through Algorithm</button>
+                <script>
+                  let stepdocument = document.getElementById("stepThroughAlgorithmButton");
+                  stepdocument.addEventListener("click", stepThroughAlgorithm);
+                </script>
                 <button id="finishAlgo" class="button-1" role="button" onclick="completeAlgorithm(); ">Complete Algorithm</button>
-                <!-- create button with class button-1 that accepts a file with .json -->
-                <button id="import" class="button-1" role="button" onclick="importStateOfWebsite();">Import</button>
+                <button id="import" class="button-1" role="button">Import</button>
+                <script>
+                    const jsonButton = document.getElementById('import');
+                    jsonButton.addEventListener('click', () => {
+                      const input = document.createElement('input');
+                      input.type = 'file';
+                      input.accept = '.json';
+                      input.onchange = e => {
+                        const file = e.target.files[0];
+                        const reader = new FileReader();
+                        reader.readAsText(file,'UTF-8');
+                        reader.onload = readerEvent => {
+                          const content = readerEvent.target.result;
+                          importStateOfWebsite(content);
+                        }
+                      };
+                      input.click();
+                    });
+                  </script>
                 <button id="export" class="button-1" role="button" onclick="exportStateOfWebsite();">Export</button>
+                <input type="checkbox" id="verbose-logging" name="verbose-logging" value="verbose-logging" onchange="toggleVerboseLogging()">
+                Verbose logging
+
             </div>
-            <!-- put another div below left div -->
             <div class="left-div-2">
                 <div class="container">
                     <div class="stack" id="stack">
@@ -67,37 +88,24 @@
         </div>
         
         <div class="right-div">
-            <div class="right-div-1">
-            <div id='sigma-container'></div>
-                <script src="./src/src.js"></script>
-            
+          <div class="right-div-1">
+          <div id='sigma-container'></div>
+              <script src="./src/src.js"></script>
+          
+          </div>
+          <div class="right-div-divider"></div>
+          <div class="right-div-2">
+            <div class="right-div-3" id="custom-text-area" style="display:inline-block;width: 48%;height: 100%;position: relative;">
+              <textarea id="custom-algorithm-text" class="fancy-textarea" placeholder="Paste your code here!"></textarea>
             </div>
-            <div class="right-div-divider"></div>
-            <div class="right-div-2">
-                    <textarea id="algo" class="fancy-textarea" placeholder="Output will be displayed here"></textarea>
-
+            <div class="right-div-3" id="verbose-logs-area">
+              <textarea disabled id="verbose-logs" class="fancy-textarea" placeholder="Verbose logs will be displayed here" autocomplete="off" ></textarea>
             </div>
-        </div>       
-
-        
-        
-            
-        
-        <!-- Context Menu -->
-        <!-- <div class="menu">
-            <ul class="menu-options">
-              <li class="menu-option">Add new node</li>
-            </ul>
+          </div>
+        </div>
+        <div class="footer" stype="margin-bottom:1rem; bottom:0;">
+          <p>Created by Anthony Lucchese (@Lucchese-Anthony) | <a href="https://github.com/Lucchese-Anthony">Github Website</a> |  <a href="https://lucchese-anthony.github.io">Personal Website</a></p>
         </div>
 
-        <div class="node">
-            <ul class="menu-options">
-              <li class="menu-option">Delete Node</li>
-              <li class="menu-option">Add Edge</li>
-              <li class="menu-option">Set as Start</li>
-              <li class="menu-option">Set as End</li>
-            </ul>
-        </div>
-        <script src="./src/context-menu.js"></script> -->
     </body>
 </html>
