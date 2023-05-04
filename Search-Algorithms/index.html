@@ -3,17 +3,22 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="src/css/layout.css" />
-		<link rel="stylesheet" href="src/css/buttons.css" />
-		<link rel="stylesheet" href="src/css/textarea.css" />
+		<link rel="stylesheet" href="./src/css/layout.css" />
+		<link rel="stylesheet" href="./src/css/buttons.css" />
+		<link rel="stylesheet" href="./src/css/textarea.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet" />
-		<script src="./src/build/sigma.min.js"></script>
-		<script src="src/helper.js" type="text/JavaScript"></script>
-		<script src="src/layouts.js" type="text/JavaScript"></script>
-		<script src="src/buttons.js" type="text/JavaScript"></script>
-		<script src="src/algorithm.js" type="text/JavaScript"></script>
+		
+		<script src="./src/frontend/build/sigma.min.js"></script>
+		<script src="./src/frontend/DS&A/queue.js" type="text/JavaScript"></script>
+		<script src="./src/frontend/DS&A/stack.js" type="text/JavaScript"></script>
+		<script src="./src/frontend/DS&A/node.js" type="text/JavaScript"></script>
+		<script src="./src/frontend/UI/colors.js" type="text/JavaScript"></script>
+		<script src="./src/frontend/helper.js" type="text/JavaScript"></script>
+		<script src="./src/frontend/data/graph.js" type="text/JavaScript"></script>
+		<script src="./src/frontend/UI/buttons.js" type="text/JavaScript"></script>
+		<script src="./src/frontend/data/algorithm.js" type="text/JavaScript"></script>
 	</head>
 	<header>
 		<title>Search Algorithms</title>
@@ -71,17 +76,10 @@
 				</script>
 				<button id="export" class="button-1" role="button" onclick="exportStateOfWebsite();">Export</button>
 				<input type="checkbox" id="verbose-logging" name="verbose-logging" value="verbose-logging" onchange="toggleVerboseLogging()" />
-				Verbose logging
+
 			</div>
 			<div class="left-div-2">
-				<div class="container">
-					<div class="stack" id="stack">
-						<h2>Stack</h2>
-					</div>
-					<div class="queue" id="queue">
-						<h2>Queue</h2>
-					</div>
-				</div>
+				<div class="container" id="structure-container">
 			</div>
 		</div>
 

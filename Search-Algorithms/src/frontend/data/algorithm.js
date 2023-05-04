@@ -1,17 +1,21 @@
 let algorithmList = {
   "Breadth First Search": bfs,
   "Depth First Search": dfs,
-  "Uniformed Search": uniformedSearch
+  "Uninformed Search": uninformedSearch
 }
 
 async function bfs() {
+  let queue = getNewDataStructure("Queue");
   queue.enqueue({node: startNode, parent: null});
-  log("Enqueued " + startNode.label)
+  pushVisitedNode(startNode)
+  // refactor this ^ with neighbors in mind
+  log("Enqueued " + startNode.label)  
   while (!queue.isEmpty()) {
     let currentNode = queue.dequeue();
     log("Dequeued " + currentNode.node.label)
     if (currentNode.node == endNode) {
       log("Found end node " + endNode.label + " from " + currentNode.node.label + "")
+      removeDataStructureFromList(queue);
       return findCompletedPath(currentNode.node, startNode);
     } else {
       let neighbors = getNeighbors(currentNode.node);
@@ -38,10 +42,13 @@ async function bfs() {
 }
 
 async function dfs() {
+    let stack = createDataStructure("Stack");
     stack.push({node: startNode, parent: null});
+    pushVisitedNode(startNode)
     while (!stack.isEmpty()) {
       let currentNode = stack.pop();
       if (currentNode.node == endNode) {
+        removeDataStructureFromList(stack);
         return findCompletedPath(currentNode.node, startNode);
       } else {
         let neighbors = getNeighbors(currentNode.node);
@@ -60,8 +67,9 @@ async function dfs() {
     }
     return [];
 }
-async function uniformedSearch() {
-  let pq = new PriorityQueue();
+
+async function uninformedSearch() {
+  let pq = createDataStructure("Priority Queue");
   pq.enqueue({node: startNode, parent: null}, 0);
   log("Enqueued " + startNode.label)
   while (!pq.isEmpty()) {
@@ -69,6 +77,7 @@ async function uniformedSearch() {
     log("Dequeued " + currentNode.node.label)
     if (currentNode.node == endNode) {
       log("Found end node " + endNode.label + " from " + currentNode.node.label + "")
+      removeDataStructureFromList(pq);
       return findCompletedPath(currentNode.node, startNode);
     } else {
       log("Current node is not end node")

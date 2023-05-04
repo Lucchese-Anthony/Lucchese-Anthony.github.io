@@ -1,7 +1,4 @@
-let graph = premadeGraphs["Grid"];
-let s = newInstanceOfSigma();
-s.graph.read(graph);
-s.refresh();
+let s = newInstanceOfSigma("Grid");
 window.onload = function() {
   let dropdown = document.getElementById("graph-list");
   dropdown.value = "Grid";
@@ -14,26 +11,35 @@ let stepAlgorithm = false;
 let steps = 0;
 
 let visitedNodes = [];
-let queue = new Queue();
-let stack = new Stack();
+let dataStructureList = [];
 let startNode
 let endNode
 setStartAndFinishPlaceholdersDefault();
 
-function getNeighbors(node) {
+// TODO comments below
+// update so each instance of the ID is not required to be a number
+// data structure abstraction, allow for n queues and m stacks, and allow for custom visuals for user-defined data stucture
+// fix import then stepping through algorithm
+// think about how to add weights etc etc
+
+function getNeighbors(node, graph=s.graph) {
   let neighbors = [];
-  for (let i = 0; i < s.graph.edges().length; i++) {
-    if (s.graph.edges()[i].source == node.id) {
-      neighbors.push(s.graph.edges()[i].target);
-    } else if (s.graph.edges()[i].target == node.id) {
-      neighbors.push(s.graph.edges()[i].source);
+  if (node == null) {
+    return neighbors;
+  }
+  for (let i = 0; i < graph.edges().length; i++) {
+    if (graph.edges()[i].source == node.id) {
+      // fix this to make it use ID's and sort
+      neighbors.push(graph.edges()[i].target);
+    } else if (graph.edges()[i].target == node.id) {
+      neighbors.push(graph.edges()[i].source);
     }
   }
-
   changeColorOfVisitedNode(node);
-  for (let edge of s.graph.edges()) {
-    changeColorOfVisitedEdge(node, s.graph.nodes(edge.target));
+  for (let edge of graph.edges()) {
+    changeColorOfVisitedEdge(node, graph.nodes(edge.target));
   }
+
   return neighbors;
 } 
 
@@ -72,11 +78,14 @@ function log(str) {
 }
 
 function step() {
+  updateDSUI()
   if (runningCompleteAlgorithm) {
       return
   } else if (step == 0) {
       step++
       return
+  } else if (step > 10000) {
+    // do something here regarding infinite loops etc etc
   }
   return new Promise(resolve => {
     // Add event listener for user input (e.g. button click)
@@ -105,3 +114,30 @@ function ifEdge(edge, node, target) {
 	return (edge.source == node.id && edge.target == target.id) || (edge.source == target.id && edge.target == node.id);
 }
 
+
+
+function createDataStructure(name,structure=null) {
+  if (name == "Queue") {
+    let queue = new Queue();
+    dataStructureList.push(queue);
+    return queue;
+  } else if (name == "Stack") {
+    let stack = new Stack();
+    dataStructureList.push(stack);
+    return stack;
+  } else if (name == "Priority Queue") {
+    let priorityQueue = new PriorityQueue();
+    dataStructureList.push(priorityQueue);
+    return priorityQueue;
+  } else {
+    dataStructureList.push(structure)
+    return;
+  }
+}
+
+function removeDataStructureFromList(structure) {
+  let index = dataStructureList.indexOf(structure);
+  if (index > -1) {
+    dataStructureList.splice(index, 1);
+  }
+}

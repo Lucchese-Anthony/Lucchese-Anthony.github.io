@@ -78,7 +78,7 @@ function exportStateOfWebsite() {
     let state = {
         "nodes": s.graph.nodes(),
         "edges": s.graph.edges(),
-        "algorithm": document.getElementById("algorithm-list").value,
+        "algorithm": document.getElementById("algorithm-list").value, // change to algorithm-choice
         "start": startNode,
         "end": endNode,
         "algo": document.getElementById("custom-algorithm-text").value,
