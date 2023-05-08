@@ -23,7 +23,6 @@ def get_db():
         db.close()
 
 app.mount("/", StaticFiles(directory="frontend", html=True), name="static")
-
 # Remove the existing root route
 @app.get("/", response_class=HTMLResponse, response_model=None)
 async def root():
